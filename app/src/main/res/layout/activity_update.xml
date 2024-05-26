@@ -7,15 +7,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:layout_marginTop="420dp"
-        android:onClick="refreshTable"
-        app:srcCompat="@android:drawable/ic_popup_sync" />
-
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appbar"
 
@@ -31,9 +22,7 @@
 
         <com.google.android.material.navigation.NavigationView
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-        </com.google.android.material.navigation.NavigationView>
+            android:layout_height="match_parent" />
     </com.google.android.material.appbar.AppBarLayout>
 
     <TextView
@@ -59,15 +48,28 @@
             android:layout_height="?attr/actionBarSize"
             android:background="#2196F3"></androidx.appcompat.widget.Toolbar>
 
+
         <Button
-            android:id="@+id/btnSubmit"
+            android:id="@+id/btnSubmit1"
             android:layout_width="369dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="350dp"
-            android:onClick="alterarText"
+            android:onClick="updateUser"
             android:text="Gravar"
-            android:textColorLink="#9F1616" />
+            android:textColorLink="#9F1616"
+            tools:ignore="DuplicateIds" />
+
+        <Button
+            android:id="@+id/btnSubmit3"
+            android:layout_width="369dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="400dp"
+            android:onClick="deleteUser"
+            android:text="Excluir"
+            android:textColorLink="#9F1616"
+            tools:ignore="DuplicateIds" />
 
         <EditText
             android:id="@+id/inputName"
@@ -77,6 +79,7 @@
             android:layout_marginTop="250dp"
             android:ems="10"
             android:inputType="text"
+            android:minHeight="48dp"
 
             android:hint="Name" />
 
@@ -89,6 +92,7 @@
             android:ems="10"
             android:inputType="text"
 
+            android:minHeight="48dp"
             android:hint="Email" />
 
 
@@ -101,40 +105,11 @@
             android:background="#4CAF50"
             android:padding="20px"
             android:text="TextView"
-            android:textColor="#EAE1E1"
+            android:textColor="#263238"
 
             />
 
 
-
-        <TableLayout android:id="@+id/score_table"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:layout_marginTop="500dp"
-            >
-            <TableRow
-                android:background="#2196F3"
-
-                >
-                <TextView android:text="Id"
-                    android:layout_width="20dp"
-                    android:layout_column="0"
-                    android:layout_weight="1">
-                </TextView>
-                <TextView android:text="Nome"
-                    android:layout_width="5dp"
-                    android:layout_column="1"
-                    android:layout_weight="1">
-                </TextView>
-                <TextView android:text="Email"
-                    android:layout_width="5dp"
-                    android:layout_column="2"
-                    android:layout_weight="1">
-                </TextView>
-            </TableRow>
-
-
-        </TableLayout>
 
 
 
